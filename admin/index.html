@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head><script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Painel Administrativo - ARC</title>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      // CONFIGURAÇÃO ESSENCIAL: Avisa ao painel onde está o banco de dados da Netlify
+      var netlifySiteURL = 'https://papaya-kataifi-0a9d5e.netlify.app';
+      localStorage.setItem('netlifySiteURL', netlifySiteURL);
+    </script>
   </head>
   <body>
-   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  // Isso força o painel a usar o login do seu site específico da Netlify
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+    <script>
+      // Redireciona após o login
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
         });
       }
-    });
-  }
-</script> <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    </script>
   </body>
 </html>
