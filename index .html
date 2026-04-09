@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARC Cariri Engenharia - Construção Residencial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #003d82;
+            --primary-dark: #002d5f;
+            --primary-light: #0052a3;
+            --secondary: #6b7280;
+            --bg: #ffffff;
+            --bg-light: #f8f9fa;
+            --bg-gray: #f3f4f6;
+            --text: #1a1a1a;
+            --text-light: #6b7280;
+            --border: #d1d5db;
+            --blue-100: #dbeafe;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 96px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .logo:hover {
+            opacity: 0.8;
+        }
+
+        .logo img {
+            height: 80px;
+            width: auto;
+        }
+
+        nav {
+            display: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            nav {
+                display: flex;
+            }
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s;
+            background: transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .menu-btn {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .menu-btn {
+                display: none;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663103625792/VJv4tzxhEVobJeXR8qfcbc/hero-construction-DWyQk5ggbX3fcWgYk87BLM.webp');
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero > .container > p:first-of-type {
+            font-size: 1.25rem;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .hero > .container > p:nth-of-type(2) {
+            color: #dbeafe;
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .hero .btn-primary {
+            background-color: white;
+            color: var(--primary);
+        }
+
+        .hero .btn-primary:hover {
+            background-color: #f3f4f6;
+        }
+
+        .hero .btn-outline {
+            border-color: white;
+            color: white;
+        }
+
+        .hero .btn-outline:hover {
+            background-color: white;
+            color: var(--primary);
+        }
+
+        /* Section Padding */
+        .section-padding {
+            padding: 4rem 0;
+        }
+
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 0;
+            }
+        }
+
+        .bg-gray {
+            background-color: var(--bg-light);
+        }
+
+        /* Typography */
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            h2 {
+                font-size: 2.25rem;
+            }
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* Grid */
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .grid-2 {
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .grid-3 {
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 768px) {
+            .grid-3 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .grid-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .grid-4 {
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 768px) {
+            .grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .grid-4 {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .card p {
+            color: var(--text-light);
+        }
+
+        .card-icon {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Service Cards */
+        .service-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            background: white;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Stats */
+        .stat-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* Work Cards */
+        .work-card {
+            background: white;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .work-card:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .work-image {
+            height: 256px;
+            overflow: hidden;
+        }
+
+        .work-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .work-card:hover .work-image img {
+            transform: scale(1.05);
+        }
+
+        .work-content {
+            padding: 1.5rem;
+        }
+
+        .work-content h3 {
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+
+        .work-info {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        .stage-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .stage-foundation {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+
+        .stage-structure {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        .stage-finishing {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+
+        /* Portfolio */
+        .portfolio-card {
+            background: var(--bg-light);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .portfolio-card:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-image {
+            height: 256px;
+            overflow: hidden;
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-card:hover .portfolio-image img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-content {
+            padding: 1.5rem;
+        }
+
+        .portfolio-content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+
+        .portfolio-content p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        /* Differentials */
+        .differential {
+            text-align: center;
+        }
+
+        .differential-icon {
+            width: 64px;
+            height: 64px;
+            background-color: rgba(0, 61, 130, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+        }
+
+        .differential h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+
+        .differential p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        /* Form */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            color: var(--text);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 61, 130, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Contact Info */
+        .contact-info-box {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 0.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background-color: rgba(0, 61, 130, 0.1);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--primary);
+        }
+
+        .contact-item h4 {
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-item p, .contact-item a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+
+        .whatsapp-box {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+        }
+
+        .whatsapp-box h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .whatsapp-box p {
+            color: #dbeafe;
+            margin-bottom: 1.5rem;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            color: var(--primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #f3f4f6;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 4rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .footer-section h4 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #dbeafe;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-logo {
+            height: 64px;
+            width: auto;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(219, 234, 254, 0.3);
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .footer-text {
+            color: #dbeafe;
+            font-size: 0.875rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: #dbeafe;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: white;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-floating {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s;
+            z-index: 40;
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .whatsapp-floating:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 767px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            .section-padding {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#home" class="logo">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663103625792/VJv4tzxhEVobJeXR8qfcbc/pasted_file_5fwkbf_image_6ce3ad34.png" alt="ARC Cariri Engenharia Logo">
+                </a>
+
+                <nav>
+                    <a href="#home">Início</a>
+                    <a href="#about">Sobre</a>
+                    <a href="#services">Serviços</a>
+                    <a href="#ongoing">Obras</a>
+                    <a href="#portfolio">Portfólio</a>
+                    <a href="#contact">Contato</a>
+                </nav>
+
+                <div style="display: none;">
+                    <a href="#contact" class="btn-primary">Solicitar Orçamento</a>
+                </div>
+
+                <button class="menu-btn" onclick="alert('Menu mobile')">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>ARC Cariri Engenharia</h1>
+                <p>Construindo qualidade, segurança e confiança.</p>
+                <p>Especialista em construção de casas, gerenciamento de obras e projetos residenciais com excelência.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Solicitar Orçamento</a>
+                    <a href="#services" class="btn-outline">Conheça Nossos Serviços</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-gray">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center;">
+                <div>
+                    <h2>Sobre a ARC Cariri Engenharia</h2>
+                    <p style="margin-bottom: 1rem;">A ARC Cariri Engenharia é uma empresa especializada em construção residencial, com anos de experiência em projetos de alta qualidade na região do Cariri.</p>
+                    <p style="margin-bottom: 2rem;">Nossa missão é construir residências que combinam qualidade, segurança e confiança, sempre respeitando os prazos e orçamentos acordados com nossos clientes.</p>
+
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Missão</h3>
+                        <p style="color: var(--text-light);">Executar projetos residenciais com excelência, qualidade e transparência.</p>
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Visão</h3>
+                        <p style="color: var(--text-light);">Ser referência em construção residencial na região do Cariri.</p>
+                    </div>
+
+                    <div>
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Valores</h3>
+                        <p style="color: var(--text-light);">Qualidade, integridade, segurança e satisfação do cliente.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-2">
+                    <div class="stat-box">
+                        <div class="stat-number"></div>
+                        <div class="stat-label">Projetos Concluídos</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Anos de Experiência</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Clientes Satisfeitos</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">10k+</div>
+                        <div class="stat-label">m² Construídos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Serviços</h2>
+                <p>Oferecemos soluções completas para seus projetos residenciais, desde o planejamento até a entrega final.</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="service-card">
+                    <div class="card-icon">🏠</div>
+                    <h3>Construção de Casas</h3>
+                    <p>Projetos residenciais modernos e personalizados, desde o planejamento até a entrega final.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">📋</div>
+                    <h3>Gerenciamento de Obras</h3>
+                    <p>Acompanhamento completo do projeto com cronograma, orçamento e controle de qualidade.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Projetos Residenciais</h3>
+                    <p>Desenvolvimento de projetos arquitetônicos e estruturais personalizados.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">🔨</div>
+                    <h3>Reformas e Ampliações</h3>
+                    <p>Modernização e expansão de imóveis existentes com qualidade garantida.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">👨‍💼</div>
+                    <h3>Consultoria Técnica</h3>
+                    <p>Orientação especializada em todas as fases do projeto residencial.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">✓</div>
+                    <h3>Acompanhamento Técnico</h3>
+                    <p>Supervisão contínua da obra para garantir qualidade e segurança.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ongoing Works Section -->
+    <section id="ongoing" class="section-padding bg-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>Obras em Andamento</h2>
+                <p>Acompanhe nossos projetos em execução na região do Cariri.</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="work-card">
+                    <div class="work-image">
+                        <img CASA 2 .jpeg>
+                    </div>
+                    <div class="work-content">
+                        <h3>Residência Moderna - Crato</h3>
+                        <div class="work-info">📍 Crato – Ceará</div>
+                        <div>
+                            <p style="font-size: 0.75rem; color: var(--text-light); margin-bottom: 0.5rem;">Etapa Atual</p>
+                            <span class="stage-badge stage-structure">Estrutura</span>
+                        </div>
+                        <div style="margin-top: 0.75rem;">
+                            <p style="font-size: 0.75rem; color: var(--text-light);">Previsão de Conclusão</p>
+                            <p style="font-weight: 600;">Concluida</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <div class="work-image">
+                        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663103625792/VJv4tzxhEVobJeXR8qfcbc/portfolio-completed-house-2eEf7up3fPZUBGj9bKc2wr.webp" alt="Casa Residencial">
+                    </div>
+                    <div class="work-content">
+                        <h3>Casa Residencial - Crato</h3>
+                        <div class="work-info">📍 Crato – Ceará</div>
+                        <div>
+                            <p style="font-size: 0.75rem; color: var(--text-light); margin-bottom: 0.5rem;">Etapa Atual</p>
+                            <span class="stage-badge stage-finishing">Concluída</span>
+                        </div>
+                        <div style="margin-top: 0.75rem;">
+                            <p style="font-size: 0.75rem; color: var(--text-light);">Previsão de Conclusão</p>
+                            <p style="font-weight: 600;">Maio 2026</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <div class="work-image">
+                        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663103625792/VJv4tzxhEVobJeXR8qfcbc/portfolio-modern-design-KLrMeZ95x4Zj2crViaNwFq.webp" alt="Projeto Residencial">
+                    </div>
+                    <div class="work-content">
+                        <h3>Projeto Residencial - Crato</h3>
+                        <div class="work-info">📍 Crato – Ceará</div>
+                        <div>
+                            <p style="font-size: 0.75rem; color: var(--text-light); margin-bottom: 0.5rem;">Etapa Atual</p>
+                            <span class="stage-badge stage-foundation">Fundação</span>
+                        </div>
+                        <div style="margin-top: 0.75rem;">
+                            <p style="font-size: 0.75rem; color: var(--text-light);">Previsão de Conclusão</p>
+                            <p style="font-weight: 600;">Julho 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Portfólio de Obras</h2>
+                <p>Conheça alguns de nossos projetos concluídos com sucesso.</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="img/CASA2.jpeg" alt="Casa Moderna">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Casa Moderna - Monumento de Fátima</h3>
+                        <p>Residência de 145m² com design contemporâneo e acabamento médio padrão.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663103625792/VJv4tzxhEVobJeXR8qfcbc/portfolio-modern-design-KLrMeZ95x4Zj2crViaNwFq.webp" alt="Casa Elegante">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Casa Elegante - Projeto B</h3>
+                        <p>Projeto residencial de 320m² com acabamento sofisticado e moderno.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663103625792/VJv4tzxhEVobJeXR8qfcbc/hero-construction-DWyQk5ggbX3fcWgYk87BLM.webp" alt="Reforma Residencial">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Reforma Residencial</h3>
+                        <p>Modernização completa de residência com ampliação de 150m².</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentials Section -->
+    <section class="section-padding bg-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>Por Que Escolher a ARC Cariri?</h2>
+                <p>Nossos diferenciais garantem a qualidade e satisfação em cada projeto.</p>
+            </div>
+
+            <div class="grid grid-4">
+                <div class="differential">
+                    <div class="differential-icon">🏆</div>
+                    <h3>Qualidade na Execução</h3>
+                    <p>Materiais premium e mão de obra especializada em cada projeto.</p>
+                </div>
+
+                <div class="differential">
+                    <div class="differential-icon">⏱️</div>
+                    <h3>Cumprimento de Prazos</h3>
+                    <p>Cronograma rigoroso e entrega dentro do prazo acordado.</p>
+                </div>
+
+                <div class="differential">
+                    <div class="differential-icon">👥</div>
+                    <h3>Acompanhamento Técnico</h3>
+                    <p>Equipe dedicada acompanhando cada etapa da construção.</p>
+                </div>
+
+                <div class="differential">
+                    <div class="differential-icon">✅</div>
+                    <h3>Transparência com Cliente</h3>
+                    <p>Comunicação clara e relatórios periódicos do andamento da obra.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Solicite um Orçamento</h2>
+                <p>Preencha o formulário abaixo e nossa equipe entrará em contato para discutir seu projeto.</p>
+            </div>
+
+            <div class="grid grid-2" style="max-width: 1000px; margin: 0 auto;">
+                <!-- Form -->
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label>Nome Completo</label>
+                        <input type="text" name="name" required placeholder="Seu nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" required placeholder="seu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Telefone</label>
+                        <input type="tel" name="phone" required placeholder="(88) 9 9999-9999">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tipo de Projeto</label>
+                        <select name="project" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="construcao">Construção de Casa</option>
+                            <option value="gerenciamento">Gerenciamento de Obra</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mensagem</label>
+                        <textarea name="message" placeholder="Descreva seu projeto..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="width: 100%;">Enviar Solicitação</button>
+                </form>
+
+                <!-- Contact Info -->
+                <div>
+                    <div class="contact-info-box" style="margin-bottom: 2rem;">
+                        <h3 style="margin-bottom: 1.5rem;">Informações de Contato</h3>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Localização</h4>
+                                <p>Crato – Ceará, Brasil</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>Telefone</h4>
+                                <a href="https://wa.me/88988883633" target="_blank">(88) 98888-3633</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:contato@arccariri.com.br">contato@arccariri.com.br</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="whatsapp-box">
+                        <h3>Contato via WhatsApp</h3>
+                        <p>Clique no botão abaixo para conversar conosco via WhatsApp e obter uma resposta rápida.</p>
+                        <a href="https://wa.me/88988883633?text=Olá! Gostaria de solicitar um orçamento para meu projeto residencial." target="_blank" class="whatsapp-btn">
+                            💬 Abrir WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663103625792/VJv4tzxhEVobJeXR8qfcbc/pasted_file_5fwkbf_image_6ce3ad34.png" alt="Logo" class="footer-logo">
+                    <p style="color: #dbeafe; font-size: 0.875rem;">Construindo qualidade, segurança e confiança em cada projeto residencial.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#services">Construção de Casas</a></li>
+                        <li><a href="#services">Gerenciamento de Obras</a></li>
+                        <li><a href="#services">Reformas e Ampliações</a></li>
+                        <li><a href="#services">Consultoria Técnica</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>📍 Crato – Ceará, Brasil</li>
+                        <li><a href="https://wa.me/88988883633" target="_blank">📞 (88) 98888-3633</a></li>
+                        <li><a href="mailto:contato@arccariri.com.br">✉️ contato@arccariri.com.br</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-text">© 2024 ARC Cariri Engenharia. Todos os direitos reservados.</p>
+                <div class="social-links">
+                    <a href="https://wa.me/88988883633" target="_blank" title="WhatsApp">💬</a>
+                    <a href="https://www.instagram.com/arc.caririengenharia" target="_blank" title="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/88988883633" target="_blank" class="whatsapp-floating" title="Fale conosco no WhatsApp">💬</a>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Obrigado! Entraremos em contato em breve.');
+            event.target.reset();
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
