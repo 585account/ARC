@@ -5,46 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARC Cariri Engenharia - Construção Residencial</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>/* Configuração do Carrossel */
-.slider-container {
-    position: relative;
-    overflow: hidden;
-    height: 250px; /* Altura padrão para os slides */
-    background-color: #eee;
-}
-
-.slide {
-    display: none; /* Esconde todas as fotos */
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta a foto sem distorcer */
-}
-
-.slide.active {
-    display: block; /* Mostra apenas a foto que tiver a classe 'active' */
-}
-
-/* Estilo das Setas */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 15px;
-    font-size: 18px;
-    z-index: 10;
-    transition: 0.3s;
-}
-
-.prev:hover, .next:hover {
-    background: rgba(0, 0, 0, 0.9);
-}
-
-.next { right: 0; border-radius: 5px 0 0 5px; }
-.prev { left: 0; border-radius: 0 5px 5px 0; }
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -1055,26 +1016,10 @@
             </div>
 
             <div class="grid grid-3">
-               <div class="portfolio-card">
-    <div class="portfolio-image slider-container">
-        <div class="slider" id="slider1">
-            <img src="CASA1.jpeg" class="slide active">
-            <img src="CASA2.jpeg" class="slide">
-            <img src="CASA_5.jpeg" class="slide">
-            <img src="CASA4.jpeg" class="slide">
-            <img src="CASA6.jpeg" class="slide">
-            <img src="CASA3.jpeg" class="slide">
-        </div>
-        
-        <button class="prev" onclick="moveSlide(-1, 'slider1')">&#10094;</button>
-        <button class="next" onclick="moveSlide(1, 'slider1')">&#10095;</button>
-    </div>
-
-    <div class="portfolio-content">
-        <h3>Casa Moderna - Monumento de Fátima Crato-CE</h3>
-        <p>Residência de 145m² com design contemporâneo médio padrão.</p>
-    </div>
-</div>
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="img/CASA2.jpeg" alt="Casa Moderna">
+                    </div>
                     <div class="portfolio-content">
                         <h3>Casa Moderna - Monumento de Fátima Crato-CE</h3>
                         <p>Residência de 145m² com design contemporâneo e acabamento médio padrão.</p>
@@ -1296,28 +1241,5 @@
             });
         });
     </script>
-<script>
-function moveSlide(step, sliderId) {
-    const slider = document.getElementById(sliderId);
-    const slides = slider.getElementsByClassName('slide');
-    let activeIndex = 0;
-
-    // 1. Identifica qual foto está visível no momento
-    for (let i = 0; i < slides.length; i++) {
-        if (slides[i].classList.contains('active')) {
-            activeIndex = i;
-            slides[i].classList.remove('active'); // "Apaga" a foto atual
-            break;
-        }
-    }
-
-    // 2. Calcula o índice da próxima foto
-    let nextIndex = activeIndex + step;
-    if (nextIndex >= slides.length) nextIndex = 0; // Volta para a primeira
-    if (nextIndex < 0) nextIndex = slides.length - 1; // Vai para a última
-
-    // 3. Mostra a nova foto
-    slides[nextIndex].classList.add('active');
-}
-</script></body>
+</body>
 </html>
