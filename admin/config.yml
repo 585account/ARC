@@ -6,13 +6,14 @@ media_folder: "img" # Onde as fotos das casas serão salvas
 public_folder: "/img"
 
 collections:
-  - name: "casas"
-    label: "Casas em Construção"
-    folder: "content/casas" # Ele vai criar essa pasta para salvar os textos
+  - name: "obras"
+    label: "Obras em Andamento"
+    folder: "content/obras"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Título do Projeto", name: "title", widget: "string" }
-      - { label: "Descrição da Obra", name: "body", widget: "markdown" }
-      - { label: "Foto da Fachada", name: "thumbnail", widget: "image" }
-      - { label: "Data de Início", name: "date", widget: "datetime" }
+      - {label: "Nome da Obra", name: "title", widget: "string"}
+      - {label: "Localização", name: "local", widget: "string", default: "Crato – Ceará"}
+      - {label: "Foto da Obra", name: "image", widget: "image"}
+      - {label: "Etapa Atual", name: "etapa", widget: "select", options: ["Estrutura", "Acabamento", "Fundação", "Alvenaria"]}
+      - {label: "Previsão de Conclusão", name: "previsao", widget: "string", hint: "Ex: Junho 2026"}
