@@ -31,6 +31,17 @@
             line-height: 1.6;
             color: var(--text);
             background-color: var(--bg);
+            <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -86,7 +97,7 @@
         }
 
         .logo img {
-            height: 80px;
+            height: 100px;
             width: auto;
         }
 
