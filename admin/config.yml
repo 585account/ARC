@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: 585account/ARC # Verifique se o nome está idêntico ao seu repositório
+  branch: main
+
+media_folder: "img" # Onde as fotos das casas serão salvas
+public_folder: "/img"
+
+collections:
+  - name: "casas"
+    label: "Casas em Construção"
+    folder: "content/casas" # Ele vai criar essa pasta para salvar os textos
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título do Projeto", name: "title", widget: "string" }
+      - { label: "Descrição da Obra", name: "body", widget: "markdown" }
+      - { label: "Foto da Fachada", name: "thumbnail", widget: "image" }
+      - { label: "Data de Início", name: "date", widget: "datetime" }
