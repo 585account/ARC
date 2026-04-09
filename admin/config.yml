@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: 585account/ARC # Verifique se o nome está idêntico ao seu repositório
+  name: git-gateway
   branch: main
 
 media_folder: "img" # Onde as fotos das casas serão salvas
